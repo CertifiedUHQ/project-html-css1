@@ -8,6 +8,9 @@ body {
 
 header {
     background-image: url(../img/venue_4_dark.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
     height: 70vh;
 }
 
@@ -21,11 +24,13 @@ nav {
 }
 
 nav h1 {
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    margin: 20px 0;
     color: white;
     font-size: 3vw;
-    margin: 10px 0;
 }
 nav a {
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
     font-size: 1.5vw;
     color: white;
     text-decoration: none;
@@ -56,12 +61,118 @@ nav ul li:not(:last-child) {
     margin: 5px 0; 
 }
 
-
 header h3 {
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
     font-size: 3vw;
     margin: 0;
 }
 
 header p {
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
     font-size: 1.5vw;
 }
+
+
+main h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 3vw;
+    margin: 15px;
+}
+
+main p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 25px;
+}
+
+.card-container span {
+    font-size: 1.5vw;
+}
+
+.card-container p {
+    font-size: 1.2vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    width: 20vw;
+    border-radius: 3px;
+    box-shadow: 0px 5px 20px #999; 
+}
+
+.card .image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover .overlay {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+}
+
+.reviews h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.reviews p {
+    display: flex;
+    text-align: center;
+}
+
+.card-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vh; 
+    margin: 0px; 
+    background-color: white; 
+    box-shadow: 0px 5px 20px #999; 
+}
+
+.card-image  { 
+    width: 100%;
+}
+
+.card-image img { 
+    object-fit:contain;
+    width: 100%;
+}
+
+.card-stock {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 25px;
+}
+
