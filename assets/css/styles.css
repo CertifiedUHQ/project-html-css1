@@ -22,10 +22,11 @@ nav {
 
 nav h1 {
     color: white;
-    font-size: 32px; 
+    font-size: 3vw;
     margin: 10px 0;
 }
 nav a {
+    font-size: 1.5vw;
     color: white;
     text-decoration: none;
 }
@@ -57,30 +58,10 @@ nav ul li:not(:last-child) {
 
 
 header h3 {
-    font-size: 28px;
+    font-size: 3vw;
     margin: 0;
 }
 
 header p {
-    font-size: 18px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    padding: 10px 10px;
-}
-
-.form label {
-    color: black;
-}
-
-.form input {
-    background-color: rgba(0, 0, 0, 0);
-    border-color: none;
-    box-shadow: none;
-    border-bottom: 1px red solid;
-    padding: 10x 5px;
-    color: green;
+    font-size: 1.5vw;
 }
