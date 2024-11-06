@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+    font-family: "Dancing Script";
+}
+
+header {
+    background-image: url(../img/venue_4_dark.jpg);
+    height: 70vh;
+}
+
+nav {
+    height: 25vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav h1 {
+    color: white;
+    font-size: 32px; 
+    margin: 10px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li:not(:last-child) {
+    border-right: 1px solid #ffffff; 
+    padding: 0 15px; 
+}
+
+.description-title {
+    color: white;
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: center; 
+    margin: 5px 0; 
+}
+
+
+header h3 {
+    font-size: 28px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px 10px;
+}
+
+.form label {
+    color: black;
+}
+
+.form input {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: none;
+    box-shadow: none;
+    border-bottom: 1px red solid;
+    padding: 10x 5px;
+    color: green;
+}
