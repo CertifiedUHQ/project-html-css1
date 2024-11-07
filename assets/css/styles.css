@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&family=Lancelot&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
     margin: 0;
     background-color: rgb(240, 240, 240);
     font-family: "Dancing Script";
 }
-
 header {
     background-image: url(../img/venue_4_dark.jpg);
     background-size: cover;
@@ -130,15 +129,16 @@ main p {
     background-color: rgba(0, 0, 0, 1);
     color: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.4s ease;
+    padding: 0 1.6em;
 }
 
+
 .card:hover .overlay {
-    display: flex;
-    flex-direction: column;
     opacity: 1;
 }
 
@@ -165,6 +165,11 @@ main p {
     width: 100%;
 }
 
+.card-reviews:hover  { 
+    transform: scale(1.02);
+    transition: transform 0.4s;
+}
+
 .card-image img { 
     object-fit:contain;
     width: 100%;
@@ -175,4 +180,300 @@ main p {
     justify-content: space-around;
     padding: 10px 25px;
 }
+.stars img{
+    width: 50%;
+    object-fit: contain;
+}
 
+.stars {
+    text-align: center;
+}
+
+.form-reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+.form-reservation form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 20px #999; 
+}
+
+.form-reservation button {
+    cursor: pointer;
+    font-family: "Roboto";
+    background-color: rgb(60, 58, 62);
+    height: 6vh;
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+    font-size: 1.3vw;
+}
+
+.form-reservation button:hover {
+    background-color: rgb(39, 39, 39);
+    transform: scale(1.02);
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.form-reservation label {
+    font-size: 1.2vw;
+    margin: 0;
+    padding: 0;
+}
+
+.section-title1, .section-title2, .section-title3 {
+    display: flex;
+    align-items: center;
+    font-size: 3vw;
+    color: #000;
+}
+
+.section-title1::before,
+.section-title1::after,
+.section-title2::before,
+.section-title2::after,
+.section-title3::before,
+.section-title3::after
+ {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000; 
+    margin: 0 2vw;
+}
+
+.card-excerpt p {
+    margin: 0 auto;
+    padding: 10px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.2vw;
+}
+
+footer {
+    font-family: "Roboto";
+    font-size: 1.1vw;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+}
+
+.left-footer {
+    font-size: 1vw;
+    width: calc(100% / 2.5);
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+
+.left-footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.left-footer li, .left-footer a {
+    list-style: none;
+    color: white;
+}
+
+.open-hours {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    
+}
+
+.open-hours span {
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 4);
+}
+
+.socials-footer {
+    display: flex;
+    gap: 20px;
+}
+
+.social-btn {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.social-btn img {
+    width: 40%; 
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s;
+}
+
+.right-footer {
+    display: flex;
+    justify-content: center;
+    width: calc(100% / 2.5);
+    margin: 25px auto;
+}
+
+.right-footer img {
+    object-fit: contain;
+    width: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        background-image: url(../img/venue_4_dark.jpg);
+        height: 40vh;
+    }
+    
+    nav {
+        height: 18vh;
+    }
+    
+    nav h1 {
+        margin: 20px 0;
+        font-size: 8vw;
+    }
+    nav a {
+        font-size: 5vw;
+    }
+    
+    nav ul li:not(:last-child) {
+        padding: 0 15px; 
+    }
+
+    .description-title {
+        height: 25vh;
+        margin: 5px 0;
+    }
+    
+    header h3 {
+        font-size: 8vw;
+        margin: 0;
+    }
+    
+    header p {
+        font-size: 4.5vw;
+        text-align: center;
+    }
+
+    main p {
+        text-align: center;
+        font-size: 4.5vw;
+    }
+
+    .card-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+        padding: 0;
+    }
+
+    .card {
+        width: 80%;
+    }
+    
+    .card:active .overlay {
+        opacity: 1;
+    }
+
+    .overlay span {
+        font-size: 7vw;
+    }
+
+    .overlay p {
+        font-size: 5vw;
+    }
+
+    .form-reservation label {
+        font-size: 4.5vw;
+    }
+
+    .form-reservation button {
+        font-size: 4.5vw;
+    }
+    
+    .form-reservation button:active {
+        background-color: rgb(39, 39, 39);
+    }
+
+    .section-title1,.section-title2,.section-title3  {
+        font-size: 8vw;
+    }
+
+    .card-stock {
+        align-items: center;
+        gap: 5vw;
+        flex-direction: column;
+    }
+
+    .card-title h3 {
+        font-size: 8vw;
+    }
+
+    .card-excerpt p {
+        font-size: 3.5vw;
+    }
+
+    footer {
+        font-size: 3.3vw;
+        height: 30vh;
+    }
+
+    footer p {
+        width: 50vw;
+    }
+    
+    .left-footer {
+        font-size: 3vw;
+    }
+    
+    .open-hours {
+        margin-top: 25px;        
+    }
+
+    .open-hours p {
+        width: 75vw;   
+    }
+    
+    .open-hours span {
+        font-size: 3vw;
+    }
+    
+    .social-btn {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .right-footer {
+        margin-top: 50vw;
+    }
+    
+    .right-footer img {
+        width: 100%;
+    }
+
+}

@@ -12,7 +12,7 @@
         <h1>Bon appétit</h1>
         <ul>
             <li><a href="#carte">Carte</a></li>
-            <li><a href="#">Réservation</a></li>
+            <li><a href="#reservation">Réservation</a></li>
             <li><a href="#reviews">Témoignages</a></li>
         </ul>
     </nav>
@@ -23,86 +23,148 @@
     </header>
 
     <main>
-        <section class="carte">
-            <h3>Notre Carte</h3>
-            <p>Notre séléction de machin de truc sur un truc qui coute cher par noselveurs locaux</p>
+        <section id="carte" class="carte">
+                <h3 class="section-title1">Notre Carte</h3>
+                <p>Notre sélection de produits uniques, soigneusement élaborés par nos artisans locaux, pour un luxe accessible.</p>
             <div class="card-container">
-
             <div class="card">
                 <div class="image">
-                    <img src="./assets/img/food_7_dark.jpg" alt="">
+                    <img src="./assets/img/food_10_dark.jpg" alt="Plat 1">
                     <div class="overlay">
-                        <span>Plat 1</span>
-                        <p>Description du Plat 1</p>
+                        <span>Carpacio de thon rouge</span>
+                        <p>Ce carpacio spécialité de notre chef a été recomposé afin d'etre gourmand et frais . Une émultion de tomates basilic et proposé avec afin d'apporter la touche rondes de ce plat.</p>
                     </div>
                 </div>
             </div>
-
             <div class="card">
                 <div class="image">
-                    <img src="./assets/img/food_2_dark.jpg" alt="">
+                    <img src="./assets/img/food_7_dark.jpg" alt="Plat 2">
                     <div class="overlay">
-                        <span>Plat 2</span>
-                        <p>Description du Plat 2</p>
+                        <span>Brunch revisité</span>
+                        <p>Nos producteur locaux fournisse les œufs , la viande ainsi que les tomates. Toutes issus de l'agriculture local elle seront tous ensemble ravir vos papilles.</p>
                     </div>
                 </div>
             </div>
-
             <div class="card">
                 <div class="image">
-                    <img src="./assets/img/food_3_dark.jpg" alt="">
+                    <img src="./assets/img/food_5_dark.jpg" alt="Plat 3">
                     <div class="overlay">
-                        <span>Plat 3</span>
-                        <p>Description du Plat 3</p>
+                        <span>Langoustine poêlées</span>
+                        <p>Langoustines poêlées servies sur une sauce crémeuse aux notes subtiles, accompagnées de morceaux de tomates cerises et garnies d'herbes fraîches et de basilic pourpre.</p>
                     </div>
                 </div>
             </div>
         </div>
         </section>
 
-        <section class="reviews">
-        <h3>Livre D’or</h3>
+        <section id="reservation" class="reservation">
+            <h3 class="section-title2">Réservation</h3>
+            <div class="form-reservation">
+                <form action="" method="POST">
+                    <label for="last-name">Nom :</label>
+                    <input type="text" id="last-name" name="last-name" maxlength="30" required />
+            
+                    <label for="first-name">Prénom :</label>
+                    <input type="text" id="first-name" name="first-name"  maxlength="30" required />
+            
+                    <label for="phone">Téléphone :</label>
+                    <input type="number" id="phone" name="phone" maxlength="10" />
+            
+                    <label for="date">Date :</label>
+                    <input type="date" id="date" name="date" required />
+            
+                    <label for="time">Heure :</label>
+                    <input type="time" id="time" name="time" required />
+            
+                    <label for="number-persons">Nombre de personne:</label>
+                    <input type="number" id="number-persons" name="number-persons" required />
+
+                    <button type="submit">Soumettre</button>
+                </form>
+            </div>
+            
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews">
+        <h3 class="section-title3">Livre D’or</h3>
         <div class="card-stock">
             <div class="card-reviews">
-                    <div class="card-image"><img src="./assets/img/testimonial_1_dark.jpg" alt="Personne" /></div>
+                    <div class="card-image"><img src="./assets/img/testimonial_1_dark.jpg" alt="Personne 1" /></div>
                         <div class="card-body">
                             <div class="card-title">
-                                <h3>Personne 1</h3>
+                                <h3>Valérie</h3>
                             </div>
                             <div class="card-excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam voluptatibus autem consectetur voluptate facere at, omnis ab optio placeat officiis! Animi modi harum enim quia veniam consectetur unde autem inventore.</p>
+                                <p>Cuisine raffinée et décontractée. Accueil chaleureux, notre fille de huit ans a été choyée. La formule découverte était excellente, même si certains pourraient trouver le choix limité. Je recommande vivement. Seul bémol : le chef un peu bruyant en cuisine.</p>
                             </div>
+                            <div class="stars"><img src="./assets/img/stars.png" alt=""></div>
                         </div>
                 </div>
-
                 <div class="card-reviews">
-                    <div class="card-image"><img src="./assets/img/testimonial_2_dark.jpg" alt="Personne" /></div>
+                    <div class="card-image"><img src="./assets/img/testimonial_2_dark.jpg" alt="Personne 2" /></div>
                         <div class="card-body">
                             <div class="card-title">
-                                <h3>Personne 2</h3>
+                                <h3>Silvie</h3>
                             </div>
                             <div class="card-excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam voluptatibus autem consectetur voluptate facere at, omnis ab optio placeat officiis! Animi modi harum enim quia veniam consectetur unde autem inventore.</p>
+                                <p>Accueil sympathique et attentionné. Cuisine équilibrée, classique et inventive. Accord mets-vins réussi. Ambiance feutrée, ni pesante ni intimidante. Une belle adresse où revenir. Mais pourquoi pas encore étoilés ?</p>
                             </div>
+                            <div class="stars"><img src="./assets/img/stars.png" alt=""></div>
                         </div>
                 </div>
-
                 <div class="card-reviews">
-                    <div class="card-image"><img src="./assets/img/testimonial_3_dark.jpg" alt="Personne" /></div>
+                    <div class="card-image"><img src="./assets/img/testimonial_3_dark.jpg" alt="Personne 3" /></div>
                         <div class="card-body">
                             <div class="card-title">
-                                <h3>Personne 3</h3>
+                                <h3>Lola</h3>
                             </div>
                             <div class="card-excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam voluptatibus autem consectetur voluptate facere at, omnis ab optio placeat officiis! Animi modi harum enim quia veniam consectetur unde autem inventore.</p>
+                                <p>Menu surprise du chef, fraîcheur et créativité. Annoncez vos intolérances pour adapter le menu. Saveurs harmonieuses, présentation impeccable. Service impeccable avec explications sur chaque plat et vin. Adresse à recommander !</p>
                             </div>
+                            <div class="stars"><img src="./assets/img/stars.png" alt=""></div>
                         </div>
                 </div>
         </div>
         </div>
     </section>
     </main>
-</footer>
 
+    <footer>
+        <div class="left-footer">
+            <ul>
+                <li><a href="#carte">Carte</a></li>
+                <li><a href="#reservation">Réservation</a></li>
+                <li><a href="#reviews">Témoignages</a></li>
+                <li><a href="">Mentions légales</a></li>
+            </ul>
+            <div class="open-hours">
+                <span>Ouvert 7/7</span>
+                <p>Lun - Jeu: 12:00 - 14:00 / 19:00 - 22:00</p>
+                <p>Ven - Dim: 12:00 - 14:00 / 19:00 - 23:00</p>
+            </div>
+        </div>
+        
+        
+    <div class="main-footer">
+        <p>Merci de votre visite, à bientôt !</p>
+        <div class="socials-footer">
+            <a class="social-btn">
+                <img src="./assets/img/logo/instagram.svg" alt="Instagram">
+            </a>
+            <a class="social-btn">
+                <img src="./assets/img/logo/facebook.svg" alt="Facebook">
+            </a>
+            <a class="social-btn">
+                <img src="./assets/img/logo/linkedin.svg" alt="Linkedin">
+            </a>
+        </div>
+        
+    </div>
+        <div class="right-footer">
+            <img src="./assets/img/signature.png" alt="signature">
+        
+        </div>
+    </footer>
 </body>
 </html>
