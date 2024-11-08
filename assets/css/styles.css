@@ -182,6 +182,11 @@ main p {
     justify-content: space-around;
     padding: 10px 25px;
 }
+
+.card-stock time {
+    display: flex;
+    justify-content: center;
+}
 .stars img{
     width: 50%;
     object-fit: contain;
