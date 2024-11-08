@@ -1,519 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&family=Lancelot&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-body {
-    margin: 0;
-    background-color: rgb(240, 240, 240);
-    font-family: "Dancing Script";
-}
-
-/* Start header */
-header {
-    background-image: url(../img/venue_1_dark.jpg);
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center; 
-    height: 70vh;
-}
-
-nav {
-    height: 25vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav h1 {
-    text-shadow: rgb(0, 0, 0) 1px 0 10px;
-    margin: 20px 0;
-    color: white;
-    font-size: 3vw;
-}
-nav a {
-    text-shadow: rgb(0, 0, 0) 1px 0 10px;
-    font-size: 1.5vw;
-    color: white;
-    text-decoration: none;
-}
-
-nav li {
-    list-style: none;
-}
-
-nav ul {
-    display: flex;
-    gap: 10px;
-}
-
-nav ul li:not(:last-child) {
-    border-right: 1px solid #ffffff; 
-    padding: 0 15px; 
-}
-
-.description-title {
-    color: white;
-    width: 100%;
-    height: 45vh;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-end; 
-    align-items: center; 
-    margin: 5px 0; 
-}
-
-header h3 {
-    text-shadow: rgb(0, 0, 0) 1px 0 10px;
-    font-size: 3vw;
-    margin: 0;
-}
-
-header p {
-    text-shadow: rgb(0, 0, 0) 1px 0 10px;
-    font-size: 1.5vw;
-}
-/* End header */
-
-/* Start main */
-main h3 {
-    display: flex;
-    justify-content: center;
-    font-size: 3vw;
-    margin: 15px;
-}
-
-main p {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5vw;
-}
-.card-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 25px;
-}
-
-.card-container span {
-    font-size: 1.5vw;
-}
-
-.card-container p {
-    font-size: 1.2vw;
-}
-
-.card {
-    display: flex;
-    flex-direction: row;
-    gap: 5vw;
-    width: 20vw;
-    border-radius: 3px;
-    box-shadow: 0px 5px 20px #999; 
-}
-
-.card .image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.card .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 1);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    padding: 0 1.6em;
-}
-
-.card:hover .overlay {
-    opacity: 1;
-}
-
-.reviews h3 {
-    padding: 0;
-    margin: 0;
-}
-
-.reviews p {
-    display: flex;
-    text-align: center;
-}
-
-.card-reviews {
-    display: flex;
-    flex-wrap: wrap;
-    width: 40vh; 
-    margin: 0px; 
-    background-color: white; 
-    box-shadow: 0px 5px 20px #999; 
-}
-
-.card-image  { 
-    width: 100%;
-}
-
-.card-reviews:hover  { 
-    transform: scale(1.02);
-    transition: transform 0.4s;
-}
-
-.card-image img { 
-    object-fit:contain;
-    width: 100%;
-}
-
-.card-stock {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 25px;
-}
-.stars img{
-    width: 50%;
-    object-fit: contain;
-}
-
-.stars {
-    text-align: center;
-}
-
-.reservation-form-maps {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
-}
-
-.reservation-form-maps iframe {
-    height: 65vh;
-    width: 50vw;
-}
-
-.form-reservation {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Roboto";
-    font-weight: bold;
-}
-
-.form-reservation form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 5px 20px #999; 
-}
-
-.form-reservation button {
-    cursor: pointer;
-    font-family: "Roboto";
-    background-color: rgb(60, 58, 62);
-    height: 6vh;
-    border-radius: 5px;
-    border-style: none;
-    color: white;
-    font-size: 1.3vw;
-}
-
-.form-reservation button:hover {
-    background-color: rgb(39, 39, 39);
-    transform: scale(1.02);
-    transition: transform 0.4s ease, background-color 0.4s ease;
-}
-
-.form-reservation label {
-    font-size: 1.2vw;
-    margin: 0;
-    padding: 0;
-}
-
-.section-title1, .section-title2, .section-title3 {
-    display: flex;
-    align-items: center;
-    font-size: 3vw;
-    color: #000;
-}
-
-.section-title1::before,
-.section-title1::after,
-.section-title2::before,
-.section-title2::after,
-.section-title3::before,
-.section-title3::after
- {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid #000; 
-    margin: 0 2vw;
-}
-
-.card-excerpt p {
-    margin: 0 auto;
-    padding: 10px;
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 1.2vw;
-}
-/* End main */
-
-/* Start footer */
-footer {
-    font-family: "Roboto";
-    font-size: 1.1vw;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    display: flex;
-}
-
-.left-footer {
-    font-size: 1vw;
-    width: calc(100% / 2.5);
-    display: flex;
-    align-items: center;
-    gap: 5vw;
-}
-
-.left-footer ul {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.left-footer li, .left-footer a {
-    list-style: none;
-    color: white;
-}
-
-.open-hours {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-    
-}
-
-.open-hours span {
-    font-size: 1.1vw;
-    font-weight: bold;
-}
-
-.main-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(100% / 4);
-}
-
-.socials-footer {
-    display: flex;
-    gap: 20px;
-}
-
-.social-btn {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    justify-content: center;
-    background-color: #ffffff;
-}
-
-.social-btn img {
-    width: 40%; 
-}
-
-.social-btn:hover {
-    transform: scale(1.1);
-    transition: transform 0.4s;
-}
-
-.right-footer {
-    display: flex;
-    justify-content: center;
-    width: calc(100% / 2.5);
-    margin: 25px auto;
-}
-
-.right-footer img {
-    object-fit: contain;
-    width: 50%;
-}
-/* End footer */
-
-/* Start Reponsive Mobile */
-@media only screen and (max-width: 480px) {
-    /* Start header */
-    header {
-        height: 50vh;
-    }
-    
-    nav {
-        height: 25vh;
-    }
-    
-    nav h1 {
-        margin: 20px 0;
-        font-size: 8vw;
-    }
-    nav a {
-        font-size: 5vw;
-    }
-    
-    nav ul li:not(:last-child) {
-        padding: 0 15px; 
-    }
-
-    .description-title {
-        height: 25vh;
-        margin: 5px 0;
-    }
-    
-    header h3 {
-        font-size: 8vw;
-        margin: 0;
-    }
-    
-    header p {
-        font-size: 4.5vw;
-        text-align: center;
-    }
-    /* End header */
-
-    /* Start main */
-    main p {
-        text-align: center;
-        font-size: 4.5vw;
-    }
-
-    .card-container {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 5vw;
-    }
-
-    .card {
-        width: 80%;
-    }
-    
-    .card:active .overlay {
-        opacity: 1;
-    }
-
-    .overlay span {
-        font-size: 7vw;
-    }
-
-    .overlay p {
-        font-size: 5vw;
-    }
-
-    .reservation-form-maps {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .reservation-form-maps iframe {
-        display: flex;
-        justify-content: center;
-        height: 40vh;
-        width: 75vw;
-    }
-    
-    .form-reservation {
-        width: 80%;
-        margin-bottom: 25px;
-    }
-
-    .form-reservation label {
-        font-size: 4.5vw;
-    }
-
-    .form-reservation button {
-        font-size: 4.5vw;
-    }
-    
-    .form-reservation button:active {
-        background-color: rgb(39, 39, 39);
-    }
-
-    .section-title1,.section-title2,.section-title3  {
-        font-size: 8vw;
-    }
-
-    .card-stock {
-        align-items: center;
-        gap: 5vw;
-        flex-direction: column;
-        margin-bottom: 5vw;
-    }
-
-    .card-title h3 {
-        font-size: 8vw;
-    }
-
-    .card-excerpt p {
-        font-size: 3.5vw;
-    }
-    /* End main */
-
-    /* Start footer */
-    footer {
-        font-size: 3.3vw;
-        height: 30vh;
-    }
-
-    footer p {
-        width: 50vw;
-    }
-    
-    .left-footer {
-        font-size: 3vw;
-    }
-    
-    .open-hours {
-        margin-top: 25px;        
-    }
-
-    .open-hours p {
-        width: 75vw;   
-    }
-    
-    .open-hours span {
-        font-size: 3vw;
-    }
-    
-    .social-btn {
-        width: 35px;
-        height: 35px;
-    }
-    
-    .right-footer {
-        margin-top: 50vw;
-    }
-    
-    .right-footer img {
-        width: 100%;
-    }
-    /* End footer */
-}
-/* End Reponsive Mobile */
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Bon Appétit - Restaurant</title>
+</head>
+<body>
+    <!-- Start Header -->
+    <header>
+    <nav>
+        <h1>Bon appétit</h1>
+        <ul>
+            <li><a href="#carte">Carte</a></li>
+            <li><a href="#reservation">Réservation</a></li>
+            <li><a href="#reviews">Témoignages</a></li>
+        </ul>
+    </nav>
+    <div class="description-title">
+        <h3>Privilégions la Qualité !</h3>
+        <p>Nous proposons une cuisine élaborée par une large gamme de produits frais, de saison, cuisinés avec simplicité. </p>
+    </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Main -->
+    <main>
+        <!-- Start Section 1 "Notre Carte" -->
+        <section id="carte" class="carte">
+                <h3 class="section-title1">Notre Carte</h3>
+                <p>Notre sélection de produits uniques, soigneusement élaborés par nos artisans locaux, pour un luxe accessible.</p>
+            <div class="card-container">
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/food_10_dark.jpg" alt="Plat 1">
+                    <div class="overlay">
+                        <span>Carpacio de thon rouge</span>
+                        <p>Ce carpacio spécialité de notre chef a été recomposé afin d'etre gourmand et frais . Une émultion de tomates basilic et proposé avec afin d'apporter la touche rondes de ce plat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/food_7_dark.jpg" alt="Plat 2">
+                    <div class="overlay">
+                        <span>Brunch revisité</span>
+                        <p>Nos producteur locaux fournisse les œufs , la viande ainsi que les tomates. Toutes issus de l'agriculture local elle seront tous ensemble ravir vos papilles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="./assets/img/food_5_dark.jpg" alt="Plat 3">
+                    <div class="overlay">
+                        <span>Langoustine poêlées</span>
+                        <p>Langoustines poêlées servies sur une sauce crémeuse aux notes subtiles, accompagnées de morceaux de tomates cerises et garnies d'herbes fraîches et de basilic pourpre.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- End Section 1 "Notre Carte" -->
+
+
+        <!-- Start Section 2 "Reservation" -->
+        <section id="reservation" class="reservation">
+            <h3 class="section-title2">Réservation</h3>
+            <div class="reservation-form-maps">
+                <div class="form-reservation">
+                    <form action="" method="POST">
+                        <label for="last-name">Nom :</label>
+                        <input type="text" id="last-name" name="last-name" maxlength="30" required />
+                
+                        <label for="first-name">Prénom :</label>
+                        <input type="text" id="first-name" name="first-name"  maxlength="30" required />
+                
+                        <label for="phone">Téléphone :</label>
+                        <input type="number" id="phone" name="phone" maxlength="10" />
+                
+                        <label for="date">Date :</label>
+                        <input type="date" id="date" name="date" required />
+                
+                        <label for="time">Heure :</label>
+                        <input type="time" id="time" name="time" required />
+                
+                        <label for="number-persons">Nombre de personnes:</label>
+                        <input type="number" id="number-persons" name="number-persons" required />
+
+                        <button type="submit">Soumettre</button>
+                    </form>
+                </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d74422.93445969225!2d2.2022804101689863!3d49.89879178403409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e78413d78b760b%3A0x40af13e816220e0!2sAmiens!5e1!3m2!1sfr!2sfr!4v1731004364397!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </section>
+        <!-- End Section 2 "Reservation" -->
+
+        <!-- Start Section 3 "Témoignages" -->
+        <section id="reviews" class="reviews">
+        <h3 class="section-title3">Livre D’or</h3>
+        <div class="card-stock">
+            <div class="card-reviews">
+                    <div class="card-image"><img src="./assets/img/testimonial_1_dark.jpg" alt="Personne 1" /></div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3>Valérie</h3>
+                            </div>
+                            <div class="card-excerpt">
+                                <p>Cuisine raffinée et décontractée. Accueil chaleureux, notre fille de huit ans a été choyée. La formule découverte était excellente, même si certains pourraient trouver le choix limité. Je recommande vivement. Seul bémol : le chef un peu bruyant en cuisine.</p>
+                            </div>
+                            <div class="stars"><img src="./assets/img/stars.png" alt=""></div>
+                        </div>
+                </div>
+                <div class="card-reviews">
+                    <div class="card-image"><img src="./assets/img/testimonial_2_dark.jpg" alt="Personne 2" /></div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3>Silvie</h3>
+                            </div>
+                            <div class="card-excerpt">
+                                <p>Accueil sympathique et attentionné. Cuisine équilibrée, classique et inventive. Accord mets-vins réussi. Ambiance feutrée, ni pesante ni intimidante. Une belle adresse où revenir. Mais pourquoi pas encore étoilés ?</p>
+                            </div>
+                            <div class="stars"><img src="./assets/img/stars.png" alt=""></div>
+                        </div>
+                </div>
+                <div class="card-reviews">
+                    <div class="card-image"><img src="./assets/img/testimonial_3_dark.jpg" alt="Personne 3" /></div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3>Lola</h3>
+                            </div>
+                            <div class="card-excerpt">
+                                <p>Menu surprise du chef, fraîcheur et créativité. Annoncez vos intolérances pour adapter le menu. Saveurs harmonieuses, présentation impeccable. Service impeccable avec explications sur chaque plat et vin. Adresse à recommander !</p>
+                            </div>
+                            <div class="stars"><img src="./assets/img/stars.png" alt=""></div>
+                        </div>
+                </div>
+        </div>
+        </div>
+    </section>
+    <!-- End Section 3 "Témoignages" -->
+    </main>
+    <!-- End Main -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="left-footer">
+            <ul>
+                <li><a href="#carte">Carte</a></li>
+                <li><a href="#reservation">Réservation</a></li>
+                <li><a href="#reviews">Témoignages</a></li>
+                <li><a href="">Mentions légales</a></li>
+            </ul>
+            <div class="open-hours">
+                <span>Ouvert 7/7</span>
+                <p>Lun - Jeu: 12:00 - 14:00 / 19:00 - 22:00</p>
+                <p>Ven - Dim: 12:00 - 14:00 / 19:00 - 23:00</p>
+            </div>
+        </div>
+        
+        
+    <div class="main-footer">
+        <p>Merci de votre visite, à bientôt !</p>
+        <div class="socials-footer">
+            <a class="social-btn">
+                <img src="./assets/img/logo/instagram.svg" alt="Instagram">
+            </a>
+            <a class="social-btn">
+                <img src="./assets/img/logo/facebook.svg" alt="Facebook">
+            </a>
+            <a class="social-btn">
+                <img src="./assets/img/logo/linkedin.svg" alt="Linkedin">
+            </a>
+        </div>
+        
+    </div>
+        <div class="right-footer">
+            <img src="./assets/img/signature.png" alt="signature">
+        </div>
+    </footer>
+    <!-- End Footer -->
+</body>
+</html>
