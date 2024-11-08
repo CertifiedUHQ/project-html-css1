@@ -363,7 +363,6 @@ footer {
 @media only screen and (max-width: 480px) {
     /* Start header */
     header {
-        background-image: url(../img/venue_4_dark.jpg);
         height: 50vh;
     }
     
@@ -410,7 +409,6 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 5vw;
-        padding: 0;
     }
 
     .card {
